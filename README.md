@@ -22,10 +22,10 @@ GraphDMAE is a robust graph neural network defense framework that **converts adv
 - matplotlib==3.10.9
 - numpy==2.4.6
 - pandas==3.0.3
-- scikit_learn==1.8.0
+- scikit\_learn==1.8.0
 - scipy==1.17.1
 - torch==2.6.0+cu124
-- torch_geometric==2.7.0
+- torch\_geometric==2.7.0
 
 Install dependencies:
 
@@ -62,7 +62,7 @@ ptb_graphs/
 │   ├── mettack_cora_0.05_idx_val.npy
 │   └── ...
 ├── DICE/
-├── Nettack/
+├── nettack/
 └── random/
 ```
 
@@ -110,22 +110,22 @@ GraphDMAE/
 
 Key hyperparameters and their default values:
 
-| Parameter  | Description                                 | Default |
-| ---------- | ------------------------------------------- | ------- |
-| `k`        | Number of Laplacian eigenvectors            | 20      |
-| `p_mask`*  | Masking ratio for cross‑masking             | 0.5     |
-| `p_swap`*  | Feature swapping ratio                      | 0.1     |
-| `γ`*       | Scaling exponent for cosine loss            | 2.0     |
-| `θ`*       | Similarity threshold in adaptive smoothness | 0.8     |
-| `τ_c`      | Feature similarity threshold (skeleton)     | 0.6     |
-| `τ_j`      | Structural similarity threshold (skeleton)  | 0.6     |
-| `τ_add`    | Edge supplementation threshold              | 0.9     |
-| `k_l`      | Neighbors for contrastive loss              | 50      |
-| `τ_contra`*| Temperature in contrastive loss             | 1.0     |
-| `τ_re`     | Spectral reconstruction threshold           | 0.4     |
-| `τ_sec`    | Secondary filtering threshold               | 0.6     |
-| `α`*       | Weight for Laplacian corrector loss         | 0.5     |
-| `β`*       | Weight for smoothness loss                  | 0.1     |
+| Parameter    | Description                                 | Default |
+| ------------ | ------------------------------------------- | ------- |
+| `k`          | Number of Laplacian eigenvectors            | 20      |
+| `p_mask`\*   | Masking ratio for cross‑masking             | 0.5     |
+| `p_swap`\*   | Feature swapping ratio                      | 0.1     |
+| `γ`\*        | Scaling exponent for cosine loss            | 2.0     |
+| `θ`\*        | Similarity threshold in adaptive smoothness | 0.8     |
+| `τ_c`        | Feature similarity threshold (skeleton)     | 0.6     |
+| `τ_j`        | Structural similarity threshold (skeleton)  | 0.6     |
+| `τ_add`      | Edge supplementation threshold              | 0.9     |
+| `k_l`        | Neighbors for contrastive loss              | 50      |
+| `τ_contra`\* | Temperature in contrastive loss             | 1.0     |
+| `τ_re`       | Spectral reconstruction threshold           | 0.4     |
+| `τ_sec`      | Secondary filtering threshold               | 0.6     |
+| `α`\*        | Weight for Laplacian corrector loss         | 0.5     |
+| `β`\*        | Weight for smoothness loss                  | 0.1     |
 
 \* denotes the value used in all the datasets.
 More details about the hyperparameters can be found in config.json.

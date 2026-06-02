@@ -35,7 +35,16 @@ pip install -r requirements.txt
 
 ### Dataset & Attack Preparation
 
-We evaluate on four datasets: **Cora, Citeseer, Cora‑ML, Pubmed**. The attacked graphs are generated using [DeepRobust](https://github.com/DSE-MSU/DeepRobust). We provide pre‑computed perturbed graphs for reproducibility.
+We evaluate on four datasets: **Cora, Citeseer, Cora‑ML, Pubmed**. Dataset statistics are shown in the table below. We only consider the largest connected component.
+
+| Dataset  | Nodes | Edges | Classes | Features |
+| -------- | ----- | ----- | ------- | -------- |
+| Cora     | 2485  | 5069  | 7       | 1433     |
+| Citeseer | 2110  | 3668  | 6       | 3703     |
+| Cora‑ML  | 2810  | 7981  | 7       | 2879     |
+| Pubmed   | 19717 | 44338 | 3       | 500      |
+
+The attacked graphs are generated using [DeepRobust](https://github.com/DSE-MSU/DeepRobust). We provide pre‑computed perturbed graphs for reproducibility.
 You can sample the attacked graphs by running the following python script:
 
 ```bash
@@ -119,7 +128,7 @@ Key hyperparameters and their default values:
 | `θ`\*        | Similarity threshold in adaptive smoothness | 0.8     |
 | `τ_c`        | Feature similarity threshold (skeleton)     | 0.6     |
 | `τ_j`        | Structural similarity threshold (skeleton)  | 0.6     |
-| `τ_add`      | Edge supplementation threshold              | 0.9     |
+| `τ_add`      | Edge supplementation threshold              | 0.85    |
 | `k_l`        | Neighbors for contrastive loss              | 50      |
 | `τ_contra`\* | Temperature in contrastive loss             | 1.0     |
 | `τ_re`       | Spectral reconstruction threshold           | 0.4     |

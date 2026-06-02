@@ -1,0 +1,136 @@
+# GraphDMAE
+
+Official code for the paper **"Enhancing Adversarial Robustness via Spectral
+Stabilization"**.
+
+## Overview
+
+GraphDMAE is a robust graph neural network defense framework that **converts adversarial structural perturbations into controllable random sparse perturbations** by re‑establishing the Davis–Kahan spectral stability condition. The framework consists of three stages:
+
+1. **Skeleton Graph Construction**: constructs Skeleton Graph and extracts Laplacian structural features.
+2. **Denoising Masked Autoencoder**: jointly compresses the perturbation norm and amplifies the spectral gap in latent space.
+3. **Spectral Reconstruction & Secondary Filtering**: produces a stabilized graph and robust node embeddings for downstream classification.
+
+![GraphDMAE Framework](./figures/framework.png)
+
+## Quick Start
+
+### Environment
+
+- python==3.13.12
+- deeprobust==0.2.11
+- matplotlib==3.10.9
+- numpy==2.4.6
+- pandas==3.0.3
+- scikit_learn==1.8.0
+- scipy==1.17.1
+- torch==2.6.0+cu124
+- torch_geometric==2.7.0
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Dataset & Attack Preparation
+
+We evaluate on four datasets: **Cora, Citeseer, Cora‑ML, Pubmed**. The attacked graphs are generated using [DeepRobust](https://github.com/DSE-MSU/DeepRobust). We provide pre‑computed perturbed graphs for reproducibility.
+You can sample the attacked graphs by running the following python script:
+
+```bash
+python structure_attack.py --dataset cora --attack mettack --ptb_rate 0.25
+```
+
+Or download the precomputed attacked graphs (Only for Cora and Citeseer under Mettack and Nettack, other datasets are not provided):
+
+```bash
+python load_data.py --dataset cora --attack mettack --ptb_rate 0.25
+```
+
+The data will be placed in `./ptb_graphs/` with the following structure:
+
+```
+ptb_graphs/
+├── cora_features.npz
+├── cora_labels.npy
+├── ...
+├── mettack/
+│   ├── mettack_cora_0.05.pt
+│   ├── mettack_cora_0.05_idx_test.npy
+│   ├── mettack_cora_0.05_idx_train.npy
+│   ├── mettack_cora_0.05_idx_val.npy
+│   └── ...
+├── DICE/
+├── Nettack/
+└── random/
+```
+
+### Running GraphDMAE
+
+To run the full defense pipeline on Cora against Mettack (25% perturbation):
+
+```bash
+python main.py --use_config --config cora_mettack_0.25 --log
+```
+
+The script performs all three stages, then evaluates the downstream GAT classifier. Results are saved in `./log/`.
+
+## Code Structure
+
+```
+GraphDMAE/
+├── main.py                 # Entry point: runs the full pipeline
+├── configs.json            # JSON configuration file
+├── load_attacked.py        # Download attacked graphs
+├── structure_attack.py     # Sample attacked graphs by structure perturbation
+├── models/
+│   ├── GraphDMAE.py        # Stage 2: Graph Denoising Masked Autoencoder
+├── utils/
+│   └── utils.py            # Utility functions(including stages 1, 3)
+├── ptb_graphs/             # attacked graphs
+│   └── ...
+├── tmp/                    # temporary files
+├── log/                    # log files
+│   └── mettack/
+│       └── ...
+│   └── DICE/
+│       └── ...
+│   └── nettack/
+│       └── ...
+│   └── random/
+│       └── ...
+├── figures/                # figures
+├── results.xlsx            # results of experiments
+├── requirements.txt
+└── README.md
+```
+
+## Hyperparameters
+
+Key hyperparameters and their default values:
+
+| Parameter  | Description                                 | Default |
+| ---------- | ------------------------------------------- | ------- |
+| `k`        | Number of Laplacian eigenvectors            | 20      |
+| `p_mask`*  | Masking ratio for cross‑masking             | 0.5     |
+| `p_swap`*  | Feature swapping ratio                      | 0.1     |
+| `γ`*       | Scaling exponent for cosine loss            | 2.0     |
+| `θ`*       | Similarity threshold in adaptive smoothness | 0.8     |
+| `τ_c`      | Feature similarity threshold (skeleton)     | 0.6     |
+| `τ_j`      | Structural similarity threshold (skeleton)  | 0.6     |
+| `τ_add`    | Edge supplementation threshold              | 0.9     |
+| `k_l`      | Neighbors for contrastive loss              | 50      |
+| `τ_contra`*| Temperature in contrastive loss             | 1.0     |
+| `τ_re`     | Spectral reconstruction threshold           | 0.4     |
+| `τ_sec`    | Secondary filtering threshold               | 0.6     |
+| `α`*       | Weight for Laplacian corrector loss         | 0.5     |
+| `β`*       | Weight for smoothness loss                  | 0.1     |
+
+\* denotes the value used in all the datasets.
+More details about the hyperparameters can be found in config.json.
+
+## Results
+
+Output results of main experiments can be found in ./log/.
+The other results are saved in results.xlsx.

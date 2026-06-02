@@ -1,0 +1,74 @@
+[2026-05-02 04:58:06,011][main.py][line:76][INFO] Random seed: 15
+[2026-05-02 04:58:06,011][main.py][line:81][INFO] Using GPU
+[2026-05-02 04:58:06,011][main.py][line:88][INFO] Loading dataset citeseer with pertubation rate 0.05
+[2026-05-02 04:58:06,199][main.py][line:101][INFO] train nodes:210
+[2026-05-02 04:58:06,199][main.py][line:102][INFO] val nodes:211
+[2026-05-02 04:58:06,199][main.py][line:103][INFO] test nodes:1688
+[2026-05-02 04:58:06,199][main.py][line:178][INFO] Namespace(use_config=True, config='citeseer_mettack_0.05', dataset='citeseer', ptb_rate=0.05, attack='mettack', jt=0.55, cos=0.55, cos_add=0.85, DMAE_hidden=256, DMAE_epochs=300, recover_threshold=0.7, lap_threshold=0.4, L_dim=20, k=50, GAT_layers=2, hidden_dim=32, dropout=0.6, log=True, seed=15)
+[2026-05-02 04:58:06,200][main.py][line:180][INFO] === Start filter adj ===
+[2026-05-02 04:58:06,417][main.py][line:183][INFO] === Recover adj ===
+[2026-05-02 04:58:17,276][main.py][line:108][INFO] clean_lap shape: torch.Size([2110, 20])
+[2026-05-02 04:58:17,638][main.py][line:116][INFO] Epoch 00000/00300 | Loss 3.0573
+[2026-05-02 04:58:17,873][main.py][line:116][INFO] Epoch 00010/00300 | Loss 2.4313
+[2026-05-02 04:58:18,139][main.py][line:116][INFO] Epoch 00020/00300 | Loss 2.3921
+[2026-05-02 04:58:18,407][main.py][line:116][INFO] Epoch 00030/00300 | Loss 2.3786
+[2026-05-02 04:58:18,671][main.py][line:116][INFO] Epoch 00040/00300 | Loss 2.3499
+[2026-05-02 04:58:18,932][main.py][line:116][INFO] Epoch 00050/00300 | Loss 2.3377
+[2026-05-02 04:58:19,201][main.py][line:116][INFO] Epoch 00060/00300 | Loss 2.3285
+[2026-05-02 04:58:19,473][main.py][line:116][INFO] Epoch 00070/00300 | Loss 2.3197
+[2026-05-02 04:58:19,746][main.py][line:116][INFO] Epoch 00080/00300 | Loss 2.3077
+[2026-05-02 04:58:20,000][main.py][line:116][INFO] Epoch 00090/00300 | Loss 2.2969
+[2026-05-02 04:58:20,272][main.py][line:116][INFO] Epoch 00100/00300 | Loss 2.2935
+[2026-05-02 04:58:20,545][main.py][line:116][INFO] Epoch 00110/00300 | Loss 2.2856
+[2026-05-02 04:58:20,814][main.py][line:116][INFO] Epoch 00120/00300 | Loss 2.2861
+[2026-05-02 04:58:21,084][main.py][line:116][INFO] Epoch 00130/00300 | Loss 2.2766
+[2026-05-02 04:58:21,357][main.py][line:116][INFO] Epoch 00140/00300 | Loss 2.2734
+[2026-05-02 04:58:21,626][main.py][line:116][INFO] Epoch 00150/00300 | Loss 2.2583
+[2026-05-02 04:58:21,892][main.py][line:116][INFO] Epoch 00160/00300 | Loss 2.2596
+[2026-05-02 04:58:22,156][main.py][line:116][INFO] Epoch 00170/00300 | Loss 2.2449
+[2026-05-02 04:58:22,418][main.py][line:116][INFO] Epoch 00180/00300 | Loss 2.2388
+[2026-05-02 04:58:22,686][main.py][line:116][INFO] Epoch 00190/00300 | Loss 2.2322
+[2026-05-02 04:58:22,956][main.py][line:116][INFO] Epoch 00200/00300 | Loss 2.2298
+[2026-05-02 04:58:23,230][main.py][line:116][INFO] Epoch 00210/00300 | Loss 2.2152
+[2026-05-02 04:58:23,457][main.py][line:116][INFO] Epoch 00220/00300 | Loss 2.1955
+[2026-05-02 04:58:23,668][main.py][line:116][INFO] Epoch 00230/00300 | Loss 2.2009
+[2026-05-02 04:58:23,872][main.py][line:116][INFO] Epoch 00240/00300 | Loss 2.1884
+[2026-05-02 04:58:24,088][main.py][line:116][INFO] Epoch 00250/00300 | Loss 2.1913
+[2026-05-02 04:58:24,343][main.py][line:116][INFO] Epoch 00260/00300 | Loss 2.2056
+[2026-05-02 04:58:24,615][main.py][line:116][INFO] Epoch 00270/00300 | Loss 2.1770
+[2026-05-02 04:58:24,880][main.py][line:116][INFO] Epoch 00280/00300 | Loss 2.1747
+[2026-05-02 04:58:25,140][main.py][line:116][INFO] Epoch 00290/00300 | Loss 2.1749
+[2026-05-02 04:58:25,407][main.py][line:140][INFO] Edge recovery: 9364
+[2026-05-02 04:58:25,407][main.py][line:198][INFO] === Train Classifier ===
+[2026-05-02 04:58:25,506][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.8757 | Accuracy 0.5924
+[2026-05-02 04:58:26,793][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.1038 | Accuracy 0.7393
+[2026-05-02 04:58:28,034][main.py][line:170][INFO] Run 00 Test Accuracy 0.7583
+[2026-05-02 04:58:28,045][main.py][line:166][INFO] Epoch 00000/00200 | Loss 2.0241 | Accuracy 0.6445
+[2026-05-02 04:58:28,555][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.1087 | Accuracy 0.7536
+[2026-05-02 04:58:29,051][main.py][line:170][INFO] Run 01 Test Accuracy 0.7518
+[2026-05-02 04:58:29,062][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.9712 | Accuracy 0.5592
+[2026-05-02 04:58:29,572][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.1209 | Accuracy 0.7773
+[2026-05-02 04:58:30,069][main.py][line:170][INFO] Run 02 Test Accuracy 0.7512
+[2026-05-02 04:58:30,080][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.9005 | Accuracy 0.5687
+[2026-05-02 04:58:30,589][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.0990 | Accuracy 0.7678
+[2026-05-02 04:58:31,085][main.py][line:170][INFO] Run 03 Test Accuracy 0.7512
+[2026-05-02 04:58:31,097][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.8681 | Accuracy 0.5735
+[2026-05-02 04:58:31,607][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.1182 | Accuracy 0.7441
+[2026-05-02 04:58:32,104][main.py][line:170][INFO] Run 04 Test Accuracy 0.7654
+[2026-05-02 04:58:32,116][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.8455 | Accuracy 0.4692
+[2026-05-02 04:58:32,626][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.1158 | Accuracy 0.7488
+[2026-05-02 04:58:33,123][main.py][line:170][INFO] Run 05 Test Accuracy 0.7648
+[2026-05-02 04:58:33,134][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.8272 | Accuracy 0.6919
+[2026-05-02 04:58:33,641][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.0908 | Accuracy 0.7393
+[2026-05-02 04:58:34,137][main.py][line:170][INFO] Run 06 Test Accuracy 0.7494
+[2026-05-02 04:58:34,149][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.8781 | Accuracy 0.5545
+[2026-05-02 04:58:35,218][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.0891 | Accuracy 0.7251
+[2026-05-02 04:58:36,436][main.py][line:170][INFO] Run 07 Test Accuracy 0.7583
+[2026-05-02 04:58:36,461][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.8470 | Accuracy 0.6825
+[2026-05-02 04:58:37,732][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.0784 | Accuracy 0.7346
+[2026-05-02 04:58:38,892][main.py][line:170][INFO] Run 08 Test Accuracy 0.7429
+[2026-05-02 04:58:38,915][main.py][line:166][INFO] Epoch 00000/00200 | Loss 1.9323 | Accuracy 0.5877
+[2026-05-02 04:58:40,040][main.py][line:166][INFO] Epoch 00100/00200 | Loss 0.1054 | Accuracy 0.7393
+[2026-05-02 04:58:40,537][main.py][line:170][INFO] Run 09 Test Accuracy 0.7618
+[2026-05-02 04:58:40,538][main.py][line:213][INFO] Mean Accuracy:0.755509
+[2026-05-02 04:58:40,538][main.py][line:214][INFO] Standard Deviation:0.007363

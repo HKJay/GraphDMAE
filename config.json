@@ -13,7 +13,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 1.0
     },
     "cora_mettack_0.05":{
@@ -30,7 +30,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_mettack_0.15": {
@@ -47,7 +47,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_mettack_0.25": {
@@ -64,7 +64,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_mettack_0.0": {
@@ -81,7 +81,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_mettack_0.05": {
@@ -98,7 +98,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_mettack_0.15": {
@@ -115,7 +115,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_mettack_0.25": {
@@ -132,7 +132,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_ml_mettack_0.0": {
@@ -149,7 +149,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 1.0
     },
     "cora_ml_mettack_0.05": {
@@ -166,7 +166,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "cora_ml_mettack_0.15": {
@@ -183,7 +183,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "cora_ml_mettack_0.25": {
@@ -200,7 +200,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "pubmed_mettack_0.0": {
@@ -217,7 +217,7 @@
         "GAT_layers": 3,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "pubmed_mettack_0.05": {
@@ -234,7 +234,7 @@
         "GAT_layers": 3,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "pubmed_mettack_0.15": {
@@ -251,7 +251,7 @@
         "GAT_layers": 3,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "pubmed_mettack_0.25": {
@@ -268,7 +268,7 @@
         "GAT_layers": 3,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "cora_DICE_0.20":{
@@ -285,7 +285,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_DICE_0.30": {
@@ -302,7 +302,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_DICE_0.40": {
@@ -319,7 +319,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_DICE_0.20": {
@@ -336,7 +336,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_DICE_0.30": {
@@ -353,7 +353,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_DICE_0.40": {
@@ -370,7 +370,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_ml_DICE_0.20": {
@@ -387,7 +387,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "cora_ml_DICE_0.30": {
@@ -404,7 +404,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "cora_ml_DICE_0.40": {
@@ -421,7 +421,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "pubmed_DICE_0.20": {
@@ -438,7 +438,7 @@
         "GAT_layers": 3,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "pubmed_DICE_0.30": {
@@ -455,7 +455,7 @@
         "GAT_layers": 3,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "pubmed_DICE_0.40": {
@@ -472,7 +472,7 @@
         "GAT_layers": 3,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":100,
+        "k_l":100,
         "lap_threshold": 0.4
     },
     "cora_nettack_0.0":{
@@ -489,7 +489,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_nettack_1.0": {
@@ -506,7 +506,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_nettack_2.0": {
@@ -523,7 +523,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_nettack_3.0": {
@@ -540,7 +540,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_nettack_4.0": {
@@ -557,7 +557,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_nettack_5.0": {
@@ -574,7 +574,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_nettack_0.0": {
@@ -591,7 +591,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_nettack_1.0": {
@@ -608,7 +608,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_nettack_2.0": {
@@ -625,7 +625,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_nettack_3.0": {
@@ -642,7 +642,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_nettack_4.0": {
@@ -659,7 +659,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_nettack_5.0": {
@@ -676,7 +676,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_random_0.2": {
@@ -693,7 +693,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_random_0.4": {
@@ -710,7 +710,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_random_0.6": {
@@ -727,7 +727,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_random_0.8": {
@@ -744,7 +744,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "cora_random_1.0": {
@@ -761,7 +761,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_random_0.2": {
@@ -778,7 +778,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_random_0.4": {
@@ -795,7 +795,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_random_0.6": {
@@ -812,7 +812,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_random_0.8": {
@@ -829,7 +829,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     },
     "citeseer_random_1.0": {
@@ -846,7 +846,7 @@
         "GAT_layers": 2,
         "hidden_dim": 32,
         "dropout": 0.6,
-        "k":50,
+        "k_l":50,
         "lap_threshold": 0.4
     }
 }

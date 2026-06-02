@@ -29,7 +29,7 @@ parser.add_argument('--DMAE_epochs', type=int, default=300,  help='epochs for DM
 parser.add_argument('--recover_threshold', type=float, default=0.6,  help='recover threshold for edge recovery')
 parser.add_argument('--lap_threshold', type=float, default=0.4,  help='lap threshold for edge recovery')
 parser.add_argument('--L_dim', type=int, default=20,  help='L dimension')
-parser.add_argument('--k', type=int, default=50,  help='k neighbors for k-nearest neighbors')
+parser.add_argument('--k_l', type=int, default=50,  help='k neighbors for k-nearest neighbors')
 parser.add_argument('--GAT_layers', type=int, default=2,  help='number of GAT layers')
 parser.add_argument("--hidden_dim", type=int, default=16 ,  help='dimension of hidden layers')
 parser.add_argument("--dropout", type=float, default=0.6 ,  help='dropout rate')
@@ -53,7 +53,7 @@ if args.use_config:
     args.GAT_layers = config['GAT_layers']
     args.hidden_dim = config['hidden_dim']
     args.dropout = config['dropout']
-    args.k = config['k']
+    args.k_l = config['k_l']
     args.lap_threshold = config['lap_threshold']
 
 if args.log:
@@ -189,7 +189,7 @@ if __name__ == '__main__':
     lam, clean_lap = compute_sorted_spectrum(n_nodes, positive_adj, args.L_dim)
     lam = lam.to(device)
     clean_lap = clean_lap.to(device)
-    recover_adj, node_x = train_MAE(DMAE, trainer, positive_adj, perturbed_adj, logger, features, clean_lap, lam, args.recover_threshold, MAE_epochs, args.k, verbose=True)
+    recover_adj, node_x = train_MAE(DMAE, trainer, positive_adj, perturbed_adj, logger, features, clean_lap, lam, args.recover_threshold, MAE_epochs, args.k_l, verbose=True)
     recover_adj = recover_adj.to(device)
     node_x = node_x.to(device)
 

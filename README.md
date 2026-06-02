@@ -142,4 +142,16 @@ More details about the hyperparameters can be found in config.json.
 ## Results
 
 Output results of main experiments can be found in ./log/.
+To maintain reproducibility, all experimental records are retained as original. The variable naming in source code and log files follows engineering conventions during early development. The following table provides a one-to-one correspondence between parameter in the paper, source code variables, and logged fields.
+
+| Parameter | Field Name in Log and code |
+| --------- | -------------------------- |
+| `k`       | `L_dim`                    |
+| `τ_c`     | `cos`                      |
+| `τ_j`     | `jt`                       |
+| `τ_add`   | `cos_add`                  |
+| `k_l`     | `k`                        |
+| `τ_re`    | `lap_threshold`            |
+| `τ_sec`   | `recover_threshold`        |
+
 The other results are saved in results.xlsx.

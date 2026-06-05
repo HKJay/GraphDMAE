@@ -1,7 +1,6 @@
 # GraphDMAE
 
-Official code for the paper **"Enhancing Adversarial Robustness via Spectral
-Stabilization"**.
+Official code for the paper **"GraphDMAE: A Novel Approach for Graph Adversarial Defense via Spectral Stabilization"**.
 
 ## Overview
 

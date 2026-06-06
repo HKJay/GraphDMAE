@@ -10,7 +10,7 @@ GraphDMAE is a robust graph neural network defense framework that **converts adv
 2. **Denoising Masked Autoencoder**: jointly compresses the perturbation norm and amplifies the spectral gap in latent space.
 3. **Spectral Reconstruction & Secondary Filtering**: produces a stabilized graph and robust node embeddings for downstream classification.
 
-![GraphDMAE Framework](./figures/framework.png)
+![GraphDMAE Framework](./figures/Framework.png)
 
 ## Quick Start
 

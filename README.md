@@ -124,12 +124,12 @@ Key hyperparameters and their default values:
 | `p_mask`\*   | Masking ratio for cross‑masking             | 0.5     |
 | `p_swap`\*   | Feature swapping ratio                      | 0.1     |
 | `γ`\*        | Scaling exponent for cosine loss            | 2.0     |
-| `θ`\*        | Similarity threshold in adaptive smoothness | 0.8     |
+| `τ_l`\*      | Similarity threshold in adaptive smoothness | 0.8     |
 | `τ_c`        | Feature similarity threshold (skeleton)     | 0.6     |
 | `τ_j`        | Structural similarity threshold (skeleton)  | 0.6     |
 | `τ_add`      | Edge supplementation threshold              | 0.85    |
 | `k_l`        | Neighbors for contrastive loss              | 50      |
-| `τ_contra`\* | Temperature in contrastive loss             | 1.0     |
+| `τ_lap`\*    | Temperature in contrastive loss             | 1.0     |
 | `τ_re`       | Spectral reconstruction threshold           | 0.4     |
 | `τ_sec`      | Secondary filtering threshold               | 0.6     |
 | `α`\*        | Weight for Laplacian corrector loss         | 0.5     |

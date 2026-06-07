@@ -153,4 +153,15 @@ To maintain reproducibility, all experimental records are retained as original. 
 | `τ_re`    | `lap_threshold`            |
 | `τ_sec`   | `recover_threshold`        |
 
-The other results are saved in results.xlsx.
+The other results are saved in **results.xlsx**.
+
+### Average Running Time per Dataset
+
+The running time is measured as the duration between the first and last log entry in each `.log` file under `./log/`.
+
+| Dataset  | Avg Time (s) | Min (s) | Max (s) |
+|----------|:------------:|:-------:|:-------:|
+| cora     |    43.33     |  24.00  |  58.00  |
+| cora_ml  |    29.29     |  20.00  |  49.00  |
+| citeseer |    42.83     |  32.00  |  58.00  |
+| pubmed   |    70.14     |  67.00  |  74.00  |
